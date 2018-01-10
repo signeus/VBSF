@@ -22,3 +22,20 @@ systemctl status vbsf.service
 sudo service vbsf.sh start
 sudo service vbsf.sh stop
 ```
+
+## Edit the config inside VBSF.sh
+```shell
+#...
+start() {
+    echo "Starting VBSF."
+    mount -t vboxsf <name virtual box folder (host)> /media/<name linux folder (virtual)>
+}
+#...
+stop() {
+    echo "Stopping VBSF."
+    umount vboxsf <name virtual box folder (host)> /media/<name linux folder (virtual)>
+}
+sudo service vbsf.sh stop
+```
+An example of this process is inside the script.
+The host folder is "torrent" in C:/torrent, and the virtual folder in linux (in the virtual machine) is windows inside the "media" folder. 
