@@ -17,7 +17,7 @@ update-rc.d vbsf.sh start 20 3 4 5
 systemctl status vbsf.service
 ```
 
-## Ejecutar servicio o detenerlo
+## Start/Stop service
 ```shell
 sudo service vbsf.sh start
 sudo service vbsf.sh stop
